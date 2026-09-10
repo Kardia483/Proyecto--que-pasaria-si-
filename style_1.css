@@ -1,0 +1,145 @@
+/* Reseteo básico: sacamos los márgenes/paddings que trae el navegador por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Colores base: fondo oscuro tipo espacio, texto claro, acentos color Marte */
+body {
+  background: #14100e;
+  color: #f2ece7;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* Header con el título del proyecto */
+header {
+  padding: 32px 24px;
+  background: linear-gradient(135deg, #3d1a0f, #b3441e);
+}
+
+header h1 {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Nav horizontal con los links entre páginas */
+nav {
+  display: flex;
+  gap: 8px;
+  padding: 16px 24px;
+  background: #1c1512;
+  border-bottom: 1px solid #3a2a22;
+}
+
+nav a {
+  color: #e7cdbd;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+nav a:hover {
+  background: #2e211b;
+  color: #ffffff;
+}
+
+/* Esta clase la va a agregar script.js al link de la página activa */
+nav a.active {
+  background: #c1440e;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Contenido principal */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+main h2 {
+  margin-bottom: 12px;
+}
+
+/* Banner de aviso en la página de "Imágenes fuertes" */
+.aviso {
+  background: #3a2410;
+  border: 1px solid #b3441e;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin-bottom: 24px;
+  color: #f2ece7;
+}
+
+/* Galería de fotos con su explicación al lado */
+.galeria {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 24px;
+}
+
+.galeria__item {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 20px;
+  align-items: start;
+  background: #1c1512;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.galeria__item img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.galeria__item h3 {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 600px) {
+  .galeria__item {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Grilla de tarjetas de "Aspectos de la vida en Marte" */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.card {
+  background: #1c1512;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.card__art {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.card__name {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.card__desc {
+  font-size: 14px;
+  color: #cbb9ac;
+}
